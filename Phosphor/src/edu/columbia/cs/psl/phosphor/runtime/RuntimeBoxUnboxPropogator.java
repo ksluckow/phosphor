@@ -276,6 +276,14 @@ public class RuntimeBoxUnboxPropogator {
 		return ret;
 	}
 
+  public static String toBinaryString$$PHOSPHORTAGGED(int t, int i) {
+    if (t == 0)
+      return Long.toBinaryString(i);
+    String ret = new String(Long.toBinaryString(i).toCharArray());
+    ret.setPHOSPHOR_TAG(t);
+    return ret;
+  }
+
 	public static String toBinaryString$$PHOSPHORTAGGED(int t, long i) {
 		if (t == 0)
 			return Long.toBinaryString(i);
